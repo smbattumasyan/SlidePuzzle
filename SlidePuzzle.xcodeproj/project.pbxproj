@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		8028E8131C96EF77008A9382 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8121C96EF77008A9382 /* main.m */; };
 		8028E8161C96EF77008A9382 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8151C96EF77008A9382 /* AppDelegate.m */; };
-		8028E8191C96EF77008A9382 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8181C96EF77008A9382 /* ViewController.m */; };
 		8028E81C1C96EF77008A9382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8028E81A1C96EF77008A9382 /* Main.storyboard */; };
 		8028E81F1C96EF77008A9382 /* SlidePuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8028E81D1C96EF77008A9382 /* SlidePuzzle.xcdatamodeld */; };
 		8028E8211C96EF77008A9382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8028E8201C96EF77008A9382 /* Assets.xcassets */; };
 		8028E8241C96EF77008A9382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8028E8221C96EF77008A9382 /* LaunchScreen.storyboard */; };
 		8028E82F1C96EF77008A9382 /* SlidePuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E82E1C96EF77008A9382 /* SlidePuzzleTests.m */; };
 		8028E83A1C96EF78008A9382 /* SlidePuzzleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8391C96EF78008A9382 /* SlidePuzzleUITests.m */; };
+		8028E8491C96EFC0008A9382 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8481C96EFC0008A9382 /* SPViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 		8028E8121C96EF77008A9382 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8028E8141C96EF77008A9382 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8028E8151C96EF77008A9382 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8028E8171C96EF77008A9382 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8028E8181C96EF77008A9382 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8028E81B1C96EF77008A9382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8028E81E1C96EF77008A9382 /* SlidePuzzle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlidePuzzle.xcdatamodel; sourceTree = "<group>"; };
 		8028E8201C96EF77008A9382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		8028E8351C96EF78008A9382 /* SlidePuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidePuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8028E8391C96EF78008A9382 /* SlidePuzzleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidePuzzleUITests.m; sourceTree = "<group>"; };
 		8028E83B1C96EF78008A9382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8028E8471C96EFC0008A9382 /* SPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPViewController.h; path = ../SPViewController.h; sourceTree = "<group>"; };
+		8028E8481C96EFC0008A9382 /* SPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPViewController.m; path = ../SPViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 			children = (
 				8028E8141C96EF77008A9382 /* AppDelegate.h */,
 				8028E8151C96EF77008A9382 /* AppDelegate.m */,
-				8028E8171C96EF77008A9382 /* ViewController.h */,
-				8028E8181C96EF77008A9382 /* ViewController.m */,
+				8028E8471C96EFC0008A9382 /* SPViewController.h */,
+				8028E8481C96EFC0008A9382 /* SPViewController.m */,
 				8028E81A1C96EF77008A9382 /* Main.storyboard */,
 				8028E8201C96EF77008A9382 /* Assets.xcassets */,
 				8028E8221C96EF77008A9382 /* LaunchScreen.storyboard */,
@@ -273,10 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8028E8191C96EF77008A9382 /* ViewController.m in Sources */,
 				8028E8161C96EF77008A9382 /* AppDelegate.m in Sources */,
 				8028E8131C96EF77008A9382 /* main.m in Sources */,
 				8028E81F1C96EF77008A9382 /* SlidePuzzle.xcdatamodeld in Sources */,
+				8028E8491C96EFC0008A9382 /* SPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

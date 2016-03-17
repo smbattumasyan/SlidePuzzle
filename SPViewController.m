@@ -89,11 +89,6 @@
 #pragma mark - Private Methods
 //------------------------------------------------------------------------------------------
 
-- (void)alertView
-{
-    
-}
-
 - (CGPoint)coordinateFromPoint:(CGPoint)point
 {
     return CGPointMake((int)(point.x / self.cropedImageWeight)+1, (int)(point.y / self.cropedImageHeight)+1);
@@ -160,7 +155,7 @@
     
     self.cropedImages = [[NSMutableArray alloc] init];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.boardView.frame.size.width, self.boardView.frame.size.height)];
-    self.size = 4;
+    self.size = 5;
     
     self.cropedImageWeight = imageView.frame.size.width/self.size;
     self.cropedImageHeight = imageView.frame.size.height/self.size;
@@ -188,7 +183,7 @@
         [self.points addObject:[NSValue valueWithCGPoint:img.frame.origin]];
     }
     
-    self.freePlace = CGPointMake(4, 4);
+    self.freePlace = CGPointMake(self.size, self.size);
 }
 
 - (BOOL)chekEquality

@@ -13,12 +13,14 @@
 @property (weak, nonatomic) IBOutlet UIView   *boardView;
 @property (weak, nonatomic) IBOutlet UIButton *openButton;
 
-@property (strong, nonatomic) NSMutableArray *cropedImages;
-@property (assign, nonatomic) CGFloat cropedImageWeight;
-@property (assign, nonatomic) CGFloat cropedImageHeight;
-@property (assign, nonatomic) CGPoint freePlace;
-@property (assign, nonatomic) NSInteger size;
-@property (strong, nonatomic) UIImage *imageFromGallery;
+@property (strong, nonatomic) NSMutableArray<NSValue *>        *points;
+@property (strong, nonatomic) NSMutableArray<UIImageView    *> *cropedImages;
+@property (assign, nonatomic) CGFloat        cropedImageWeight;
+@property (assign, nonatomic) CGFloat        cropedImageHeight;
+@property (assign, nonatomic) CGPoint        freePlace;
+@property (assign, nonatomic) NSMutableArray *imagesPoints;
+@property (assign, nonatomic) NSInteger      size;
+@property (strong, nonatomic) UIImage        *imageFromGallery;
 
 @end
 
@@ -32,6 +34,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.boardView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,12 +69,30 @@
                 break;
             }
         }
+        NSLog(@"%d",[self chekEquality]);
+        if ([self chekEquality])
+        {
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Congratulations" message:@"You got it" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+        }
+        
     }
 }
 
 //------------------------------------------------------------------------------------------
 #pragma mark - Private Methods
 //------------------------------------------------------------------------------------------
+
+- (void)alertView
+{
+    
+}
 
 - (CGPoint)coordinateFromPoint:(CGPoint)point
 {
@@ -155,15 +176,34 @@
         }
     }
     [self.cropedImages removeLastObject];
+    self.openButton.hidden = YES;
+    self.boardView.hidden = NO;
 }
 
 - (void)addImagesInBoardView
 {
+    self.points = [[NSMutableArray alloc] init];
     for (UIImageView *img in self.cropedImages) {
         [self.boardView addSubview:img];
+        [self.points addObject:[NSValue valueWithCGPoint:img.frame.origin]];
     }
     
     self.freePlace = CGPointMake(4, 4);
+}
+
+- (BOOL)chekEquality
+{
+    for (int i = 0; i < self.points.count; i++) {
+//        NSLog(@"%f   ==   %f   &&   %f   ==   %f",self.points[i].CGPointValue.x,self.cropedImages[i].frame.origin.x,self.points[i].CGPointValue.y,self.cropedImages[i].frame.origin.y);
+        if ((int)self.points[i].CGPointValue.x != (int)self.cropedImages[i].frame.origin.x || (int)self.points[i].CGPointValue.y != (int)self.cropedImages[i].frame.origin.y) {
+//            NSLog(@"notequal%d",i);
+//            NSLog(@"%f   ==   %f   &&   %f   ==   %f",self.points[i].CGPointValue.x,self.cropedImages[i].frame.origin.x,self.points[i].CGPointValue.y,self.cropedImages[i].frame.origin.y);
+            return NO;
+        }
+    }
+    
+//    NSLog(@"yes");
+    return YES;
 }
 
 @end

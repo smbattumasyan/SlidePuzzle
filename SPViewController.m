@@ -147,6 +147,10 @@
         for (int j = 0; j < self.size; j++) {
             imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.cropedImageWeight*j, self.cropedImageHeight*i, self.cropedImageWeight-1, self.cropedImageHeight-1)];
             imageView.image = [self getSubImageFrom:image WithRect:CGRectMake(self.cropedImageWeight*j, self.cropedImageHeight*i, self.cropedImageWeight, self.cropedImageHeight)];
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.cropedImageWeight/2-5, self.cropedImageHeight/2-5, 20, 15)];
+            static int c = 1;
+            label.text = [NSString stringWithFormat:@"%d",c++ ];
+            [imageView addSubview:label];
             [self.cropedImages addObject:imageView];
         }
     }

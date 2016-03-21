@@ -16,6 +16,8 @@
 		8028E82F1C96EF77008A9382 /* SlidePuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E82E1C96EF77008A9382 /* SlidePuzzleTests.m */; };
 		8028E83A1C96EF78008A9382 /* SlidePuzzleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8391C96EF78008A9382 /* SlidePuzzleUITests.m */; };
 		8028E8491C96EFC0008A9382 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8481C96EFC0008A9382 /* SPViewController.m */; };
+		80772AC31C9FD38400EC5C72 /* SPBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 80772AC21C9FD38400EC5C72 /* SPBoard.m */; };
+		80772AC61C9FDF3E00EC5C72 /* SPImagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80772AC51C9FDF3E00EC5C72 /* SPImagesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		8028E83B1C96EF78008A9382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8028E8471C96EFC0008A9382 /* SPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPViewController.h; path = ../SPViewController.h; sourceTree = "<group>"; };
 		8028E8481C96EFC0008A9382 /* SPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPViewController.m; path = ../SPViewController.m; sourceTree = "<group>"; };
+		80772AC11C9FD38400EC5C72 /* SPBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBoard.h; sourceTree = "<group>"; };
+		80772AC21C9FD38400EC5C72 /* SPBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBoard.m; sourceTree = "<group>"; };
+		80772AC41C9FDF3E00EC5C72 /* SPImagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImagesController.h; sourceTree = "<group>"; };
+		80772AC51C9FDF3E00EC5C72 /* SPImagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImagesController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +111,11 @@
 			children = (
 				8028E8141C96EF77008A9382 /* AppDelegate.h */,
 				8028E8151C96EF77008A9382 /* AppDelegate.m */,
-				8028E8471C96EFC0008A9382 /* SPViewController.h */,
-				8028E8481C96EFC0008A9382 /* SPViewController.m */,
+				80772AC11C9FD38400EC5C72 /* SPBoard.h */,
+				80772AC21C9FD38400EC5C72 /* SPBoard.m */,
+				80772AC41C9FDF3E00EC5C72 /* SPImagesController.h */,
+				80772AC51C9FDF3E00EC5C72 /* SPImagesController.m */,
+				80772AC01C9FD1B400EC5C72 /* Controllers */,
 				8028E81A1C96EF77008A9382 /* Main.storyboard */,
 				8028E8201C96EF77008A9382 /* Assets.xcassets */,
 				8028E8221C96EF77008A9382 /* LaunchScreen.storyboard */,
@@ -141,6 +150,15 @@
 				8028E83B1C96EF78008A9382 /* Info.plist */,
 			);
 			path = SlidePuzzleUITests;
+			sourceTree = "<group>";
+		};
+		80772AC01C9FD1B400EC5C72 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8028E8471C96EFC0008A9382 /* SPViewController.h */,
+				8028E8481C96EFC0008A9382 /* SPViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80772AC61C9FDF3E00EC5C72 /* SPImagesController.m in Sources */,
+				80772AC31C9FD38400EC5C72 /* SPBoard.m in Sources */,
 				8028E8161C96EF77008A9382 /* AppDelegate.m in Sources */,
 				8028E8131C96EF77008A9382 /* main.m in Sources */,
 				8028E81F1C96EF77008A9382 /* SlidePuzzle.xcdatamodeld in Sources */,
@@ -500,6 +520,7 @@
 				8028E8401C96EF78008A9382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8028E8411C96EF78008A9382 /* Build configuration list for PBXNativeTarget "SlidePuzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +529,7 @@
 				8028E8431C96EF78008A9382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8028E8441C96EF78008A9382 /* Build configuration list for PBXNativeTarget "SlidePuzzleUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +538,7 @@
 				8028E8461C96EF78008A9382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

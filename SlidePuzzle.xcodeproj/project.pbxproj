@@ -18,6 +18,14 @@
 		8028E8491C96EFC0008A9382 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8028E8481C96EFC0008A9382 /* SPViewController.m */; };
 		80772AC31C9FD38400EC5C72 /* SPBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 80772AC21C9FD38400EC5C72 /* SPBoard.m */; };
 		80772AC61C9FDF3E00EC5C72 /* SPImagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80772AC51C9FDF3E00EC5C72 /* SPImagesController.m */; };
+		4D4D00111C96000000000011 /* MenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00011C96000000000001 /* MenuFactory.swift */; };
+		4D4D00121C96000000000012 /* TileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00021C96000000000002 /* TileType.swift */; };
+		4D4D00131C96000000000013 /* Match3Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00031C96000000000003 /* Match3Board.swift */; };
+		4D4D00141C96000000000014 /* Match3GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00041C96000000000004 /* Match3GameState.swift */; };
+		4D4D00151C96000000000015 /* Match3Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00051C96000000000005 /* Match3Scene.swift */; };
+		4D4D00161C96000000000016 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00061C96000000000006 /* MainMenuView.swift */; };
+		4D4D00171C96000000000017 /* SlidePuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00071C96000000000007 /* SlidePuzzleView.swift */; };
+		4D4D00181C96000000000018 /* Match3GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D00081C96000000000008 /* Match3GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,15 @@
 		80772AC21C9FD38400EC5C72 /* SPBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBoard.m; sourceTree = "<group>"; };
 		80772AC41C9FDF3E00EC5C72 /* SPImagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImagesController.h; sourceTree = "<group>"; };
 		80772AC51C9FDF3E00EC5C72 /* SPImagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImagesController.m; sourceTree = "<group>"; };
+		4D4D00011C96000000000001 /* MenuFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFactory.swift; sourceTree = "<group>"; };
+		4D4D00021C96000000000002 /* TileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileType.swift; sourceTree = "<group>"; };
+		4D4D00031C96000000000003 /* Match3Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match3Board.swift; sourceTree = "<group>"; };
+		4D4D00041C96000000000004 /* Match3GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match3GameState.swift; sourceTree = "<group>"; };
+		4D4D00051C96000000000005 /* Match3Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match3Scene.swift; sourceTree = "<group>"; };
+		4D4D00061C96000000000006 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		4D4D00071C96000000000007 /* SlidePuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePuzzleView.swift; sourceTree = "<group>"; };
+		4D4D00081C96000000000008 /* Match3GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match3GameView.swift; sourceTree = "<group>"; };
+		4D4D00091C96000000000009 /* SlidePuzzle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlidePuzzle-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +133,8 @@
 				80772AC41C9FDF3E00EC5C72 /* SPImagesController.h */,
 				80772AC51C9FDF3E00EC5C72 /* SPImagesController.m */,
 				80772AC01C9FD1B400EC5C72 /* Controllers */,
+				4D4D00211C96000000000021 /* Match3 */,
+				4D4D00091C96000000000009 /* SlidePuzzle-Bridging-Header.h */,
 				8028E81A1C96EF77008A9382 /* Main.storyboard */,
 				8028E8201C96EF77008A9382 /* Assets.xcassets */,
 				8028E8221C96EF77008A9382 /* LaunchScreen.storyboard */,
@@ -159,6 +178,45 @@
 				8028E8481C96EFC0008A9382 /* SPViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4D4D00211C96000000000021 /* Match3 */ = {
+			isa = PBXGroup;
+			children = (
+				4D4D00011C96000000000001 /* MenuFactory.swift */,
+				4D4D00221C96000000000022 /* Models */,
+				4D4D00231C96000000000023 /* Scene */,
+				4D4D00241C96000000000024 /* Views */,
+			);
+			path = Match3;
+			sourceTree = "<group>";
+		};
+		4D4D00221C96000000000022 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D4D00021C96000000000002 /* TileType.swift */,
+				4D4D00031C96000000000003 /* Match3Board.swift */,
+				4D4D00041C96000000000004 /* Match3GameState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D4D00231C96000000000023 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4D4D00051C96000000000005 /* Match3Scene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		4D4D00241C96000000000024 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D4D00061C96000000000006 /* MainMenuView.swift */,
+				4D4D00071C96000000000007 /* SlidePuzzleView.swift */,
+				4D4D00081C96000000000008 /* Match3GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +357,14 @@
 				8028E8131C96EF77008A9382 /* main.m in Sources */,
 				8028E81F1C96EF77008A9382 /* SlidePuzzle.xcdatamodeld in Sources */,
 				8028E8491C96EFC0008A9382 /* SPViewController.m in Sources */,
+				4D4D00111C96000000000011 /* MenuFactory.swift in Sources */,
+				4D4D00121C96000000000012 /* TileType.swift in Sources */,
+				4D4D00131C96000000000013 /* Match3Board.swift in Sources */,
+				4D4D00141C96000000000014 /* Match3GameState.swift in Sources */,
+				4D4D00151C96000000000015 /* Match3Scene.swift in Sources */,
+				4D4D00161C96000000000016 /* MainMenuView.swift in Sources */,
+				4D4D00171C96000000000017 /* SlidePuzzleView.swift in Sources */,
+				4D4D00181C96000000000018 /* Match3GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -443,6 +509,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.SlidePuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlidePuzzle/SlidePuzzle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -456,6 +525,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.st.SlidePuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlidePuzzle/SlidePuzzle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

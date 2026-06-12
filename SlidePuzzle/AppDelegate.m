@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SlidePuzzle-Swift.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // SwiftUI main menu is the root; Main.storyboard is no longer auto-loaded.
+    self.window                    = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = [SPMenuFactory makeRootViewController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
